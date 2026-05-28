@@ -2,13 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://llnpack3bjgo" path="res://assets/Main Characters/Ninja Frog/Idle (32x32).png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bpllg0iwx0oxt" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://de5pm6v64g6sk" path="res://assets/Main Characters/Ninja Frog/Fall (32x32).png" id="2_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://o8uavba4joua" path="res://assets/Main Characters/Ninja Frog/Jump (32x32).png" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://dl0jhilr4fdl6" path="res://assets/Main Characters/Ninja Frog/Run (32x32).png" id="4_qlg0r"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ujl30"]
-atlas = ExtResource("2_qlg0r")
-region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -110,14 +105,6 @@ region = Rect2(352, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ujl30")
-}],
-"loop": true,
-"name": &"fall",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_g2els")
 }, {
 "duration": 1.0,
@@ -215,7 +202,7 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1710477634]
 sprite_frames = SubResource("SpriteFrames_jej6c")
-animation = &"fall"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1849845591]
