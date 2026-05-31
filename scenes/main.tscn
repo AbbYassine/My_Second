@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ct886lrb7s7jb" path="res://scenes/straw_berrie.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b0ndfr431qsno" path="res://scenes/spikes.tscn" id="6_o6xl0"]
 [ext_resource type="Script" uid="uid://b2wh6mjxip3ro" path="res://scripts/game_manager.gd" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://qaowblj2g3dh" path="res://scenes/kill_zone.tscn" id="8_tipki"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
 texture = ExtResource("2_0wfyh")
@@ -268,6 +269,9 @@ texture = ExtResource("2_0wfyh")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sugp2")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85g3d"]
+size = Vector2(242, 38)
+
 [node name="Node" type="Node" unique_id=572541956]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1805760977]
@@ -329,3 +333,9 @@ position = Vector2(1464, 600)
 
 [node name="spikes5" parent="traps" unique_id=390105539 instance=ExtResource("6_o6xl0")]
 position = Vector2(1513, 600)
+
+[node name="killZone" parent="." unique_id=1127226179 instance=ExtResource("8_tipki")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone" unique_id=600916347]
+position = Vector2(1418, 605)
+shape = SubResource("RectangleShape2D_85g3d")
