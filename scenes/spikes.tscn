@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b0ndfr431qsno"]
+
+[ext_resource type="Texture2D" uid="uid://blg8wco84a67j" path="res://assets/Traps/Spike Head/16-bit-spike-Sheet.png" id="1_5pg7g"]
+[ext_resource type="PackedScene" uid="uid://qaowblj2g3dh" path="res://scenes/kill_zone.tscn" id="2_xbcdo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbcdo"]
+size = Vector2(24, 27)
+
+[node name="spikes" type="Area2D" unique_id=506881878]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=930506042]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_5pg7g")
+region_enabled = true
+region_rect = Rect2(0, 0, 15.889808, 16)
+
+[node name="killZone" parent="." unique_id=1864377664 instance=ExtResource("2_xbcdo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone" unique_id=863639047]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_xbcdo")
