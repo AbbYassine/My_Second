@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Second Games"
-run/main_scene="uid://dg4f6phtcbqqn"
+run/main_scene="uid://bu8mdujpqeoae"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
