@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://qaowblj2g3dh" path="res://scenes/kill_zone.tscn" id="7_gnai3"]
 [ext_resource type="PackedScene" uid="uid://c30n1oe87vte3" path="res://scenes/end_tropphy.tscn" id="8_i8kv5"]
 [ext_resource type="PackedScene" uid="uid://b2o1nnd6qqc7g" path="res://scenes/level2.tscn" id="9_conm7"]
+[ext_resource type="Texture2D" uid="uid://c3jw1560vq60r" path="res://assets/Other/Heart.png" id="10_d3jkd"]
+[ext_resource type="PackedScene" uid="uid://dur17wdst37vx" path="res://scenes/slime.tscn" id="11_u3awl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
 texture = ExtResource("3_d3jkd")
@@ -387,3 +389,59 @@ theme_override_font_sizes/font_size = 30
 text = "Points : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Hearts" type="Panel" parent="SceneObjects/UI" unique_id=718537784]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -241.0
+offset_top = 21.0
+offset_right = -19.0
+offset_bottom = 90.0
+grow_horizontal = 0
+
+[node name="BoxContainer" type="BoxContainer" parent="SceneObjects/UI/Hearts" unique_id=2050875461]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.5
+offset_top = -35.0
+offset_right = 113.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart" type="TextureRect" parent="SceneObjects/UI/Hearts/BoxContainer" unique_id=885418851]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_d3jkd")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="SceneObjects/UI/Hearts/BoxContainer" unique_id=2100024647]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_d3jkd")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="SceneObjects/UI/Hearts/BoxContainer" unique_id=1044112677]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_d3jkd")
+expand_mode = 2
+
+[node name="Slimes" type="Node" parent="SceneObjects/UI/Hearts" unique_id=577688205]
+
+[node name="Slime" parent="SceneObjects/UI/Hearts/Slimes" unique_id=929235427 instance=ExtResource("11_u3awl")]
+position = Vector2(766, 380)
+
+[node name="Slime2" parent="SceneObjects/UI/Hearts/Slimes" unique_id=1528648391 instance=ExtResource("11_u3awl")]
+position = Vector2(553, 140)
+
+[node name="Slime3" parent="SceneObjects/UI/Hearts/Slimes" unique_id=407907056 instance=ExtResource("11_u3awl")]
+position = Vector2(1793, 91)
