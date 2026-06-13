@@ -35,19 +35,21 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gstla"]
 size = Vector2(23, 33)
 
-[node name="Slime" type="RigidBody2D" unique_id=929235427]
+[node name="Slime" type="CharacterBody2D" unique_id=297487336]
 scale = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=500973075]
 texture_filter = 1
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_fd6lc")
+autoplay = "default"
+frame_progress = 0.8252166
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1932104994]
 position = Vector2(-0.5, 19.5)
