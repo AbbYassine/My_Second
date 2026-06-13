@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dur17wdst37vx"]
 
 [ext_resource type="Texture2D" uid="uid://cpt6huwi0vs76" path="res://assets/Other/slime_green.png" id="1_371uh"]
+[ext_resource type="Script" uid="uid://kblor4o3nuua" path="res://scripts/ennemies_kill_zone.gd" id="2_p2gj0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2gj0"]
 atlas = ExtResource("1_371uh")
@@ -41,6 +42,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gstla"]
 size = Vector2(23, 33)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6pvg"]
+size = Vector2(30, 36)
+
 [node name="Slime" type="CharacterBody2D" unique_id=297487336]
 scale = Vector2(1.5, 1.5)
 
@@ -54,3 +58,13 @@ frame_progress = 0.8252166
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1932104994]
 position = Vector2(-0.5, 19.5)
 shape = SubResource("RectangleShape2D_gstla")
+
+[node name="ennemies_KillZone" type="Area2D" parent="." unique_id=1676297701]
+collision_mask = 2
+script = ExtResource("2_p2gj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ennemies_KillZone" unique_id=718035570]
+position = Vector2(-0.3333335, 18)
+shape = SubResource("RectangleShape2D_n6pvg")
+
+[connection signal="body_entered" from="ennemies_KillZone" to="ennemies_KillZone" method="_on_body_entered"]
