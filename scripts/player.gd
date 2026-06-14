@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_wall():
 		velocity.y = JUMP_VELOCITY
 		velocity.x = wallJumpVelocity * get_wall_normal().x
+		wallJumpDirection(direction)
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -50,3 +51,10 @@ func _physics_process(delta: float) -> void:
 	if direction == -1:
 		animated_sprite_2d.flip_h = true
 	
+
+	# handle the direction the sprite is looking when wall jumping
+func wallJumpDirection( direction ):
+	if direction == 1:
+		animated_sprite_2d.flip_h = false
+	if direction == -1:
+		animated_sprite_2d.flip_h = true
