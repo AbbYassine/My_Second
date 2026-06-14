@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://c30n1oe87vte3" path="res://scenes/end_tropphy.tscn" id="8_i8kv5"]
 [ext_resource type="PackedScene" uid="uid://b2o1nnd6qqc7g" path="res://scenes/level2.tscn" id="9_conm7"]
 [ext_resource type="Texture2D" uid="uid://c3jw1560vq60r" path="res://assets/Other/Heart.png" id="10_d3jkd"]
-[ext_resource type="PackedScene" uid="uid://dur17wdst37vx" path="res://scenes/slime.tscn" id="11_u3awl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
 texture = ExtResource("3_d3jkd")
@@ -308,17 +307,6 @@ position = Vector2(201, 528)
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/Player" unique_id=992539363]
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
-
-[node name="Slimes" type="Node" parent="SceneObjects" unique_id=577688205]
-
-[node name="Slime" parent="SceneObjects/Slimes" unique_id=929235427 instance=ExtResource("11_u3awl")]
-position = Vector2(766, 380)
-
-[node name="Slime2" parent="SceneObjects/Slimes" unique_id=1528648391 instance=ExtResource("11_u3awl")]
-position = Vector2(553, 140)
-
-[node name="Slime3" parent="SceneObjects/Slimes" unique_id=407907056 instance=ExtResource("11_u3awl")]
-position = Vector2(1793, 91)
 
 [node name="collectables" type="Node" parent="SceneObjects" unique_id=1688253590]
 
