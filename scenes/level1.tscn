@@ -313,13 +313,13 @@ position_smoothing_speed = 7.0
 [node name="Slimes" type="Node" parent="SceneObjects" unique_id=577688205]
 
 [node name="Slime" parent="SceneObjects/Slimes" unique_id=929235427 instance=ExtResource("11_u3awl")]
-script = ExtResource("6_2ku1j")
+position = Vector2(766, 380)
 
 [node name="Slime2" parent="SceneObjects/Slimes" unique_id=1528648391 instance=ExtResource("11_u3awl")]
-script = ExtResource("6_2ku1j")
+position = Vector2(553, 140)
 
 [node name="Slime3" parent="SceneObjects/Slimes" unique_id=407907056 instance=ExtResource("11_u3awl")]
-script = ExtResource("6_2ku1j")
+position = Vector2(1793, 91)
 
 [node name="collectables" type="Node" parent="SceneObjects" unique_id=1688253590]
 

@@ -1,24 +1,10 @@
 [gd_scene format=3 uid="uid://qaowblj2g3dh"]
 
-[sub_resource type="GDScript" id="GDScript_5csqv"]
-script/source = "extends Area2D
-
-@onready var timer: Timer = $Timer
-
-
-
-func _on_body_entered(body: Node2D) -> void:
-	print(\"You have died\")
-	timer.start()
-
-
-func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene()
-"
+[ext_resource type="Script" uid="uid://bn5reemrb5t05" path="res://scripts/area_2d.gd" id="1_kebdr"]
 
 [node name="killZone" type="Area2D" unique_id=1127226179]
 collision_mask = 2
-script = SubResource("GDScript_5csqv")
+script = ExtResource("1_kebdr")
 
 [node name="Timer" type="Timer" parent="." unique_id=212214945]
 wait_time = 0.6

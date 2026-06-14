@@ -8,8 +8,6 @@ const wallJumpGravity = 300
 const wallJumpVelocity = 1000
 
 
-func _ready() -> void:
-	add_to_group("Player")
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
