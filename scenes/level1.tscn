@@ -5,11 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://cqn1g5hwackjm" path="res://assets/Terrain/Terrain (16x16).png" id="3_d3jkd"]
 [ext_resource type="PackedScene" uid="uid://bvjfg1ah8v3ni" path="res://scenes/player.tscn" id="4_u3awl"]
 [ext_resource type="PackedScene" uid="uid://ct886lrb7s7jb" path="res://scenes/straw_berrie.tscn" id="5_2ku1j"]
+[ext_resource type="Script" uid="uid://owo0rv68du44" path="res://scripts/slime.gd" id="6_2ku1j"]
 [ext_resource type="PackedScene" uid="uid://b0ndfr431qsno" path="res://scenes/spikes.tscn" id="6_f31uk"]
 [ext_resource type="PackedScene" uid="uid://qaowblj2g3dh" path="res://scenes/kill_zone.tscn" id="7_gnai3"]
 [ext_resource type="PackedScene" uid="uid://c30n1oe87vte3" path="res://scenes/end_tropphy.tscn" id="8_i8kv5"]
 [ext_resource type="PackedScene" uid="uid://b2o1nnd6qqc7g" path="res://scenes/level2.tscn" id="9_conm7"]
 [ext_resource type="Texture2D" uid="uid://c3jw1560vq60r" path="res://assets/Other/Heart.png" id="10_d3jkd"]
+[ext_resource type="PackedScene" uid="uid://dur17wdst37vx" path="res://scenes/slime.tscn" id="11_u3awl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
 texture = ExtResource("3_d3jkd")
@@ -307,6 +309,17 @@ position = Vector2(201, 528)
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/Player" unique_id=992539363]
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
+
+[node name="Slimes" type="Node" parent="SceneObjects" unique_id=577688205]
+
+[node name="Slime" parent="SceneObjects/Slimes" unique_id=929235427 instance=ExtResource("11_u3awl")]
+script = ExtResource("6_2ku1j")
+
+[node name="Slime2" parent="SceneObjects/Slimes" unique_id=1528648391 instance=ExtResource("11_u3awl")]
+script = ExtResource("6_2ku1j")
+
+[node name="Slime3" parent="SceneObjects/Slimes" unique_id=407907056 instance=ExtResource("11_u3awl")]
+script = ExtResource("6_2ku1j")
 
 [node name="collectables" type="Node" parent="SceneObjects" unique_id=1688253590]
 
